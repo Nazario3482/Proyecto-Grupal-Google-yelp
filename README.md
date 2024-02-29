@@ -154,7 +154,7 @@ $$
 
 [linkedin-Naza]: https://www.linkedin.com/in/nazareno-fantin/
 [linkedin-Sebas]:https://github.com/Nazario3482/Proyecto-Grupal-Google-yelp  
-[linkedin-Alejo]:https://github.com/Nazario3482/Proyecto-Grupal-Google-yelp
+[linkedin-Alejo]:www.linkedin.com/in/alejo-gabriel-diez-gomez-402b93254
 [linkedin-Keyla]:www.linkedin.com/in/keyla-elyneth
 [linkedin-Tom]:https://github.com/Nazario3482/Proyecto-Grupal-Google-
 
