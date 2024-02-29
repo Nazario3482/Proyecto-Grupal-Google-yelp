@@ -139,7 +139,7 @@ $$
 | -------------- |--------------------- | -------- |-|
 | Data Engineer  | Nazareno Fantin      | [![LinkedIn][linkedin-shield]][linkedin-Naza]  | [![GitHub][github-shield]][github-Naza]  |
 | Data Scientist | Sebastian Rosenblunn | [![LinkedIn][linkedin-shield]][linkedin-Sebas] | [![GitHub][github-shield]][github-Sebas] |
-| Data Scientist | Alejo Diez           | [![LinkedIn][linkedin-shield]][linkedin-Alejo]   | [![GitHub][github-shield]][github-Alejo]   |
+| Data Scientist | Alejo Diez Gomez     | [![LinkedIn][linkedin-shield]][linkedin-Alejo]   | [![GitHub][github-shield]][github-Alejo]   |
 | Data Analyst   | Keyla Serna          | [![LinkedIn][linkedin-shield]][linkedin-Keyla] | [![GitHub][github-shield]][github-Keyla] |
 | Data Analyst   | Tomás Basovich       | [![LinkedIn][linkedin-shield]][linkedin-Tom] | [![GitHub][github-shield]][github-Tom] |
 <!-- | Project Management  | Scrum Master   |  |Maximiliano Vaca Coll |       ||-->
@@ -154,7 +154,7 @@ $$
 
 [linkedin-Naza]: https://www.linkedin.com/in/nazareno-fantin/
 [linkedin-Sebas]:https://github.com/Nazario3482/Proyecto-Grupal-Google-yelp  
-[linkedin-Alejo]:www.linkedin.com/in/alejo-gabriel-diez-gomez-402b93254
+[linkedin-Alejo]:https://www.linkedin.com/in/alejo-gabriel-diez-gomez-402b93254/
 [linkedin-Keyla]:www.linkedin.com/in/keyla-elyneth
 [linkedin-Tom]:https://github.com/Nazario3482/Proyecto-Grupal-Google-
 
