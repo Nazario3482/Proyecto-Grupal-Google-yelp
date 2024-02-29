@@ -1,4 +1,4 @@
-<h1 align="center">🍽️ **`YELP & GOOGLE MAPS - REVIEWS `** 🗺️</h1>
+<h1 align="center">🍽️ **`YELP & GOOGLE MAPS REVIEWS `** 🗺️</h1>
 
 ## 📋 **Tabla de contenidos**
 - [Contexto](#Contexto)
