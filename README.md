@@ -152,14 +152,14 @@ $$
 [linkedin-shield]: https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white
 [github-shield]: https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white
 
-[linkedin-Naza]: https://github.com/Nazario3482/Proyecto-Grupal-Google-yelp
-[linkedin-Sebas]:https://github.com/Nazario3482/Proyecto-Grupal-Google-yelp
+[linkedin-Naza]: https://www.linkedin.com/in/nazareno-fantin/
+[linkedin-Sebas]:https://github.com/Nazario3482/Proyecto-Grupal-Google-yelp  
 [linkedin-Alejo]:https://github.com/Nazario3482/Proyecto-Grupal-Google-yelp
-[linkedin-Keyla]:https://github.com/Nazario3482/Proyecto-Grupal-Google-yelp
+[linkedin-Keyla]:www.linkedin.com/in/keyla-elyneth
 [linkedin-Tom]:https://github.com/Nazario3482/Proyecto-Grupal-Google-
 
-[github-Naza]: https://github.com/Nazario3482/Proyecto-Grupal-Google-yelp
+[github-Naza]: https://github.com/Nazario3482
 [github-Sebas]:https://github.com/Nazario3482/Proyecto-Grupal-Google-yelp
-[github-Alejo]:https://github.com/Nazario3482/Proyecto-Grupal-Google-yelp
-[github-Keyla]:https://github.com/Nazario3482/Proyecto-Grupal-Google-yelp
+[github-Alejo]:https://github.com/AlejoDiezGomez
+[github-Keyla]:https://github.com/KeylaSernaB
 [github-Tom]:https://github.com/Nazario3482/Proyecto-Grupal-Google-yelp
