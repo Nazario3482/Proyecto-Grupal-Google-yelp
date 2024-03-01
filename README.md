@@ -4,8 +4,8 @@
 - [Contexto](#Contexto)
 - [Objetivos](#objetivos)
 - [MPV](#mpv)
-- [Alcance](#fuera-de-alcance)
-- [Fuera de alcance](#fuera-de-alcance)
+- [Alcance del proyecto](#fuera-de-alcance)
+- [Limitaciones del proyecto](#fuera-de-alcance)
 - [KPI's](#kpi´s)
 - [Metodología de Trabajo](#metodologia-del-trabajo)
 - [Stack Tecnológico](#Stack-Tecnológico)
@@ -17,44 +17,71 @@ Como parte de una consultora de data, nos han contratado para poder realizar un 
 
 <!-- objetivos section -->
 ## **🎯 Objetivos**
-### **🌟 Objetivo General**
+### **🌟 Objetivo General 1**
 
-Desarrollar, implementar y lanzar al mercado un sistema de recomendación de restaurantes utilizando el análisis de las opiniones de los clientes en las plataformas Yelp y Google Maps.
+Desarrollar un sistema de recomendación de restaurantes que satisfaga las necesidades y preferencias de los usuarios.   
 
 ### **🔍 Objetivos específicos**
 
-1. **Análisis de Sentimientos:** Emplearemos técnicas de procesamiento de lenguaje natural para evaluar las opiniones sobre restaurantes y detectar las tendencias actuales en base a estas reseñas.
+1. Recomendar restaurantes similares a otros que hayan tenido éxito utilizando técnicas de filtrado colaborativo.
 
-2. **Identificación de Restaurantes:** Buscaremos aquellos establecimientos con altas puntuaciones pero con un número reducido de reseñas, ya que representan lugares potenciales por descubrir.
+2. Recomendar restaurantes que se ajusten a los gustos y preferencias de los usuarios utilizando modelos basados en contenido.
 
-3. **Recomendaciones de Calidad:** Proporcionaremos a nuestros usuarios recomendaciones de restaurantes que consistentemente han mantenido un alto estándar de calidad a lo largo del tiempo, asegurando así recomendaciones confiables.
+### **🌟 Objetivo General 2**
+Identificar la zona más conveniente para emplazar nuevos locales mediante el análisis geoespacial y técnicas de correlación, con el fin de tomar decisiones estratégicas que optimicen el rendimiento de un posible nuevo negocio.
+
+### **🔍 Objetivos específicos**
+1. Analizar datos de ubicación geográfica, demográficos para identificar variables que puedan correlacionarse con el éxito de un negocio.
+
+2. Evaluar las relaciones de correlación entre estas variables y el rendimiento pasado de negocios similares en diferentes áreas geográficas.
+
+3. Seleccionar la zona más prometedora para la expansión del negocio basándose en las correlaciones identificadas.
+
+### **🌟 Objetivo General 3**
+Utilizar técnicas de análisis de datos para comprender mejor el comportamiento futuro del mercado en un rubro turístico dado.
+
+### **🔍 Objetivos específicos**
+1. Determinar las variables que más influyen en el crecimiento o decrecimiento de los negocios.
+
+2. Identificar tendencias en las ventas o ingresos de diferentes rubros de negocios mediante el análisis de series temporales con modelos ARIMA.
+
+### **🌟 Objetivos Comunes**
+
+1. **Extracción de datos desde la fuente:** Utilizaremos las API´s provistas por Yelp y google maps y datos recolección propia/scrapping para las variables demográficas.
+
+2. **Disponibilizar datos en la nube:** Implementaremos un proceso de carga incremental con servicios de GCP. Asi los datos podrán ser consumidos por nuestra plataforma.
+
+3. **Limpieza de Datos:** Corregir valores atípicos, datos faltantes y normalizar los datos, asegurando la integridad de los mismos antes de la análisis.
+
+4. **Automatización:** Automatizar tanto como sea posible el proceso de ETL para mejorar la eficiencia y reducir el riesgo de errores manuales.
+
+5. **Documentación:** Documentar detalladamente todo el proceso de ETL, incluyendo las fuentes de datos, las transformaciones realizadas y los criterios de calidad aplicados, para facilitar la replicabilidad y el mantenimiento del proceso.
 
 <p align="right">(<a href="#readme-top">volver arriba</a>)</p>
 
 <!-- mpv section -->
 ## **🚀 MPV**  
 
-El Producto Mínimo Viable (MVP) es una plataforma de recomendación de restaurantes que proporciona las siguientes características:
+El Producto Mínimo Viable (MVP) es una Interfaz de usuario  que proporciona las siguientes características: 
 
-**Selección de criterio de restaurantes:** Los clientes pueden seleccionar el tipo de restaurantes que desean descubrir. Pueden optar por los mejores restaurantes, lugares por descubrir o restaurantes que garantizan calidad.
+La interfaz de usuario deberá ser intuitiva y fácil de usar, permitiendo a los usuarios acceder a estas funcionalidades de manera clara y efectiva. Además, deberá ser capaz de mostrar los resultados de manera visualmente atractiva, mediante gráficos, mapas y listas de recomendaciones
 
-**Visualización de resultados:** La plataforma proporcionará una lista de tres restaurantes basada en el criterio seleccionado por el cliente. También aquí pueden incluirse filtros del tipo "por precio", "más antiguo", etc..
 
 <!-- Alcance section -->
-## **🌐 Alcance**
+## **🌐 Alcance del proyecto**
 
-**Extracción de Datos:** Recopilaremos y utilizaremos datos de plataformas de reseñas como Google Maps y Yelp.
+**Extracción de Datos:** Recopilar y utilizar datos de plataformas de reseñas como Google Maps y Yelp.
 
 **Análisis de Datos:** El sistema utilizará técnicas avanzadas de Aprendizaje Automático y Big Data para analizar las reseñas de los usuarios. Este análisis permitirá al sistema identificar tendencias y recomendar lugares consistentemente.
 
-**Cobertura Geográfica:** El sistema se centrará específicamente en los locales de comida en los estados de California, Florida y Nueva York en los Estados Unidos. Sin embargo, el marco subyacente puede ser escalado para incluir otras regiones en el futuro.
+**Cobertura Geográfica:** El sistema se centrará específicamente en los locales de comida en los estados de California, Florida y Nueva York en los Estados Unidos.
 
-**Visualización y Sistema de Recomendación:** El sistema proporcionará una interfaz de usuario intuitiva que permite a los usuarios iniciar sesión, seleccionar su criterio de restaurantes, visualizar los resultados de la recomendación y proporcionar retroalimentación.
+**Visualización y Sistema de Recomendación:** El sistema proporcionará una interfaz de usuario intuitiva que permite a nuestros clientes seleccionar su criterio de restaurantes, visualizar los resultados de la recomendación y proporcionar retroalimentación.
 
 **Iteración y Mejora:** Con la retroalimentación de los usuarios, el sistema será iterado y mejorado continuamente para satisfacer mejor las necesidades de los usuarios.
 
 <!-- Fuera de alcance section -->
-## **❌ Fuera de alcance**
+## **❌ Limitaciones del proyecto**
 
 **Datos en tiempo real:** Dependiendo de las limitaciones de las API de Google Maps y Yelp, puede que no podamos obtener datos en tiempo real. Esto podría afectar la capacidad del sistema para identificar las tendencias más recientes.
 
@@ -97,7 +124,7 @@ $$
 
 La metodología Scrum divide el trabajo en partes pequeñas y manejables llamadas "sprints". Cada sprint dura un período de tiempo corto, en este caso una semana, durante el cual el equipo se enfoca en completar un conjunto específico de tareas. Al final de cada sprint, se realizará una demo (sprint review meeting) en la que se hará una demostración de los entregables desarrollados, esperando una retroalimentación. Se ajusta así la planificación para el siguiente sprint según lo que se haya aprendido. Además, cada día se realizarán reuniones diarias de seguimiento (Daily Standup), para discutir el progreso diario y posibles inconvenientes. Todo esto permite una adaptación continua a medida que el equipo avanza.
 
-![metodología scrum](https://robertotouza.com/wp-content/uploads/2023/07/Manual-Metodologia-Scrum-Roberto-Touza-3.png)
+![metodología scrum](assets\ScrumMetodo.png)
 
 **Sprint 1 - Comprensión del Negocio y de los Datos**:
 
