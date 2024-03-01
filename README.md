@@ -2,11 +2,11 @@
 
 ## 📋 **Tabla de contenidos**
 - [Contexto](#Contexto)
-- [Objetivos](#objetivos)
-- [MPV](#mpv)
-- [Alcance del proyecto](#fuera-de-alcance)
-- [Limitaciones del proyecto](#fuera-de-alcance)
-- [KPI's](#kpi´s)
+- [Objetivos](#Objetivos)
+- [MPV](#MVP)
+- [Alcance del proyecto](#Alcance-del-proyecto)
+- [Limitaciones del proyecto](#Limitaciones-del-proyecto)
+- [KPI's](#KPI´s)
 - [Metodología de Trabajo](#metodologia-del-trabajo)
 - [Stack Tecnológico](#Stack-Tecnológico)
 
