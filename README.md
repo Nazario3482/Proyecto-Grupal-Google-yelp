@@ -124,7 +124,7 @@ $$
 
 La metodología Scrum divide el trabajo en partes pequeñas y manejables llamadas "sprints". Cada sprint dura un período de tiempo corto, en este caso una semana, durante el cual el equipo se enfoca en completar un conjunto específico de tareas. Al final de cada sprint, se realizará una demo (sprint review meeting) en la que se hará una demostración de los entregables desarrollados, esperando una retroalimentación. Se ajusta así la planificación para el siguiente sprint según lo que se haya aprendido. Además, cada día se realizarán reuniones diarias de seguimiento (Daily Standup), para discutir el progreso diario y posibles inconvenientes. Todo esto permite una adaptación continua a medida que el equipo avanza.
 
-![metodología scrum](assets\ScrumMetodo.png)
+![metodología scrum](assets/scrummetodo.png)
 
 **Sprint 1 - Comprensión del Negocio y de los Datos**:
 
