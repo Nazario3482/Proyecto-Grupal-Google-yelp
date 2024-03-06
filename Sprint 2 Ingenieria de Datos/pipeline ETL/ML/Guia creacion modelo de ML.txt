@@ -1,0 +1,63 @@
+1.1* Modelo de Machine Learning: 
+utilizaremos un modelo de clasificación implementando el coseno de la similitud con la biblioteca cosine_similarity.
+El objetivo del modelo es predecir las etiquetas de atributos a partir de características como la , la categoría (category) y el estado (state) de un conjunto de datos.
+2 * Creacion del data frame para el modelo de ML
+2.1 Editar las dos tablas 
+Con x los que eliminaria 
+Reviews 
+  []user id 
+  []business_id 
+  []rating
+  [x]text
+  [x]timestamp
+  []sentiment score 
+Bussines_id 
+   []category
+   []name 
+   []latitude 
+   []longitude 
+   []avg_rating 
+   [x]num_of_reviews
+   []state
+2.2 Creacion de un unico df para el modelado de machine learning 
+df_Ml
+[]user id 
+[]busines_id 
+[]rating 
+[]sentiment score 
+[]category 
+[]name 
+[]avg rating 
+[]state 
+2.3 Modificacion de columnas * los que van a ser dummies y + los que van a ser codificados en etiquetas
+df_Ml
+[]user id 
+[]busines_id 
+[]rating 
+[]sentiment score 
+[+]category 
+[]name 
+[]avg rating 
+[*]state  
+2.4 Creacion final de dos DF para la construccion del modelo de ML
+DF_1 
+[]name 
+[]bussisne_id 
+[]avg rating 
+
+DF_2
+[]name 
+[]business_id 
+[]state 
+[]latitud
+[]longitud
+[]Category 
+[]AVG rating 
+3. construccion y testeo del modelo de ML
+3.1 Division de los datos en muestras de entrenamiento y de prueba se asigna un 
+25% de los datos al conjunto de prueba
+3.2 compilacion de las funciones  (loss, optimizer , metrics)
+3.3 entrenamiento del modelo (e entrena el modelo utilizando el conjunto de entrenamiento (X_train, y_train) durante un número determinado de épocas (epochs)
+y un tamaño de lote (batch_size). Además, se utiliza una validación cruzada del 20% del conjunto de entrenamiento (validation_split) para monitorear el rendimiento 
+del modelo durante el entrenamiento y evitar el sobreajuste)
+3.3 Evaluacion del modelo (test loss) 
