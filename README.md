@@ -92,29 +92,32 @@ La interfaz de usuario deberá ser intuitiva y fácil de usar, permitiendo a los
  <!-- KPI section -->
 ## **📊 KPI´s:**
 
-• **Tasa de crecimiento de reseñas:** para medir la rapidez con la que las reseñas de los usuarios están aumentando en las plataformas de Yelp y Google Maps.
+• **Satisfacción del cliente:** 
+* **Métrica**: Cantidad de reseñas positivas
+* **Objetivo**: Aumentar 10% las reseñas positivas trismetralmente.
 
 $$
-\mathrm{KPI}=\dfrac{R_{final} - R_{inicial}}{R_{inicial}}\cdot100
+\mathrm{KPI}=\dfrac{R_{positivos}}{R_{total}}\cdot100
 $$
 
 <br>
 
-• **Sentimiento promedio de las reseñas:** para evaluar la satisfacción general de los usuarios con los negocios analizados, se puede aplicar filtrando por rubro o categoría.
+• **Cantidad de interacciones por sucursal:** 
+* **Métrica**: Cantidad de interacciones en las sucursales. Cantidad total de reseñas por sucursales/cantidad total de reseñas.
+* **Objetivo**: Aumentar 5% las reseñas positivas por sucursal mensualmente.
 
 $$
-\mathrm{KPI}=\dfrac{1}{n}\sum_{i=1}^{n} S_i
+\mathrm{KPI}=\dfrac{R_{sucursal}}{R_{total}}\cdot100
 $$
-
-*n = Cantidad de reseñas*<br>
-*Si = Valor del sentimiento*
 
 <br>
 
-• **Precisión del modelo de recomendación:** para medir qué tan precisas son las recomendaciones que se ofrecen a los usuarios en función de sus experiencias previas.
+• **Satisfacción del liente respecto al servicio:** 
+* **Métrica**: Cantidad de comentarios positivos respecto al servicio sobre cantidad de comentarios totales respecto al servicio.
+* **Objetivo**: Aumentar 5% la cantidad de comentarios positivos por servicio mensualmente.
 
 $$
-\mathrm{KPI}=\dfrac{R_{relevantes}}{Total}\cdot100
+\mathrm{KPI}=\dfrac{R_{servicio}^{+}}{R_{totalservicio}}\cdot100
 $$
 
 <br>
