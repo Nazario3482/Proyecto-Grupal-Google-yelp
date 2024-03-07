@@ -92,33 +92,21 @@ La interfaz de usuario deberá ser intuitiva y fácil de usar, permitiendo a los
  <!-- KPI section -->
 ## **📊 KPI´s:**
 
+• **Crecimiento de reseñas positivas:** 
+* **Descripción**: Este KPI se centra en el aumento porcentual del número de reseñas positivas en comparación del año anterior.
+* **Objetivo**: Aumentar 5% las reseñas positivas para los negocios en comparación con el año anterior.
+
+<br>
+
+• **Aumento de la tasa anual de retención de usuarios:** 
+* **Descripción**:Mide la tasa de usuarios que escriben reseñas año a año.
+* * **Objetivo**: Aumentar 5%  la tasa de reseñas en comparación con el año anterior.
+
+<br>
+
 • **Satisfacción del cliente:** 
-* **Métrica**: Cantidad de reseñas positivas
-* **Objetivo**: Aumentar 10% las reseñas positivas trismetralmente.
-
-$$
-\mathrm{KPI}=\dfrac{R_{positivos}}{R_{total}}\cdot100
-$$
-
-<br>
-
-• **Cantidad de interacciones por sucursal:** 
-* **Métrica**: Cantidad de interacciones en las sucursales. Cantidad total de reseñas por sucursales/cantidad total de reseñas.
-* **Objetivo**: Aumentar 5% las reseñas positivas por sucursal mensualmente.
-
-$$
-\mathrm{KPI}=\dfrac{R_{sucursal}}{R_{total}}\cdot100
-$$
-
-<br>
-
-• **Satisfacción del liente respecto al servicio:** 
-* **Métrica**: Cantidad de comentarios positivos respecto al servicio sobre cantidad de comentarios totales respecto al servicio.
-* **Objetivo**: Aumentar 5% la cantidad de comentarios positivos por servicio mensualmente.
-
-$$
-\mathrm{KPI}=\dfrac{R_{servicio}^{+}}{R_{totalservicio}}\cdot100
-$$
+* **Descripción**:Mide la satisfacción de los usuarios con un negocio, combinando calificaciones y ponderaciones de las reseñas de los usuarios en las plataformas Yelp y Google
+* **Objetivo**: Aumentar 3% el índice de satisfacciónen comparación al semestre anterior.
 
 <br>
 
