@@ -96,17 +96,29 @@ La interfaz de usuario deberá ser intuitiva y fácil de usar, permitiendo a los
 * **Descripción**: Este KPI se centra en el aumento porcentual del número de reseñas positivas en comparación del año anterior.
 * **Objetivo**: Aumentar 5% las reseñas positivas para los negocios en comparación con el año anterior.
 
+$$
+\mathrm{KPI} = \frac{R_{\text{añoActual}}^{+} - R_{\text{añoAnterior}}^{+}}{R_{\text{añoAnterior}}^{+}} \cdot 100
+$$
+
+<br>
+
+• **Disminución de reseñas negativas:** 
+* **Descripción**:Este KPI se centra en la disminución porcentual del número de reseñas negativas en comparación del año anterior.
+* **Objetivo**: Disminuir 5%  la tasa de reseñas en comparación con el año anterior.
+
+$$
+\mathrm{KPI} = \frac{R_{\text{añoAnterior}}^{-} - R_{\text{añoActual}}^{-}}{R_{\text{añoAnterior}}^{-}} \cdot 100
+$$
+
 <br>
 
 • **Aumento de la tasa anual de retención de usuarios:** 
 * **Descripción**:Mide la tasa de usuarios que escriben reseñas año a año.
-* * **Objetivo**: Aumentar 5%  la tasa de reseñas en comparación con el año anterior.
+* **Objetivo**: Aumentar 5%  la tasa de reseñas en comparación con el año anterior.
 
-<br>
-
-• **Satisfacción del cliente:** 
-* **Descripción**:Mide la satisfacción de los usuarios con un negocio, combinando calificaciones y ponderaciones de las reseñas de los usuarios en las plataformas Yelp y Google
-* **Objetivo**: Aumentar 3% el índice de satisfacciónen comparación al semestre anterior.
+$$
+\mathrm{KPI} = \frac{U_{\text{ReseñasActual}}- U_{\text{ReseñasAnterior}}}{U_{\text{ReseñasAnterior}}}
+$$
 
 <br>
 
