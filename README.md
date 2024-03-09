@@ -1,4 +1,4 @@
-<h1 align="center">🍽️ **`YELP & GOOGLE MAPS REVIEWS `** 🗺️</h1>
+<h1 align="center">🍽️ `YELP & GOOGLE MAPS REVIEWS ` 🗺️</h1>
 
 ## 📋 **Tabla de contenidos**
 - [Contexto](#Contexto)
@@ -62,9 +62,8 @@ Utilizar técnicas de análisis de datos para comprender mejor el comportamiento
 <!-- mpv section -->
 ## **🚀 MPV**  
 
-El Producto Mínimo Viable (MVP) es una Interfaz de usuario  que proporciona las siguientes características: 
-
-La interfaz de usuario deberá ser intuitiva y fácil de usar, permitiendo a los usuarios acceder a estas funcionalidades de manera clara y efectiva. Además, deberá ser capaz de mostrar los resultados de manera visualmente atractiva, mediante gráficos, mapas y listas de recomendaciones
+El Producto Mínimo Viable (MVP) debe ser una Interfaz de usuario  que proporciona las características elaboradas en los objetivos.
+La interfaz de usuario deberá ser intuitiva y fácil de usar, permitiendo a los usuarios acceder a estas funcionalidades de manera clara y efectiva. Además, deberá ser capaz de mostrar los resultados de manera visualmente atractiva, mediante gráficos, mapas y listas de recomendaciones.
 
 
 <!-- Alcance section -->
@@ -72,7 +71,7 @@ La interfaz de usuario deberá ser intuitiva y fácil de usar, permitiendo a los
 
 **Extracción de Datos:** Recopilar y utilizar datos de plataformas de reseñas como Google Maps y Yelp.
 
-**Análisis de Datos:** El sistema utilizará técnicas avanzadas de Aprendizaje Automático y Big Data para analizar las reseñas de los usuarios. Este análisis permitirá al sistema identificar tendencias y recomendar lugares consistentemente.
+**Análisis de Datos:** El sistema utilizará técnicas avanzadas de Analisis de Datos y Aprendizaje Automático  para analizar las reseñas de los usuarios. Este análisis permitirá al sistema identificar tendencias y realizar recomendaciones consistentemente.
 
 **Cobertura Geográfica:** El sistema se centrará específicamente en los locales de comida en los estados de California, Florida y Nueva York en los Estados Unidos.
 
@@ -122,12 +121,57 @@ $$
 
 <br>
 
+<!-- flujo section -->
+## **🔧 Flujo de Trabajo**
+
+Lo primero que realizamos al recibir los datos en crudo es un trabajo de etl manual y estandarizado a traves de python y las librerias pertinentes. Este etl inicial consta de la eliminacion de las columnas irrelevantes, si es necesario desanidamos columnas, manejamos los valores nulos y duplicados, normalizamos tipos de datos y los nombres de las columnas para estandarizar segun el esquema que se adapta a nuestros objetivos y finalmente se segmentamos las tablas segun corresponda.
+![ETL inicial](assets/etl_inicial.png)
+
+A partir de aca los datos sigues dos caminos diferentes y vuelven a encontrar en el producto final. Por un lado tenemos los datos que seran untilizados para entrenar los sistemas de recomendaciónn por filtrado colaborativo y  filtrado basado en contenido.  Los mismos se implementaran sobre fast api, utilizando streamlit como interface y google app engine para el deploy. Por otro lado, en el segundo camino de los datos, Luego del etl inicial, los datos pasan a un bucket especifico de google cloud storage donde funcionan como trigger para el inicio de las funciones de google cloud functions que ingestara las tablas en big query.
+La funcion verifica si se trata de un archivo csv y de ser asi lo carga de forma temporal y pasa a validar si coincide con el esquema asignado para la tabla de bigquery, de ser asi comienza a subir los datos en otra tabla temporal en big query en donde se realizara un merge con la tabla original si es que se cumplen ciertas condiciones. En ambas tablas solo se cargaran los datos si no estan en tabla original, proceso conocido como carga incremental.pero la tabla reviews y business difieren en las condiciones del merge. El criterio utilizado para la tabla reviews es que que si los datos que se intentan agregar difieren en user_id y timestamp se agregan enfectivamente, asumiendo como supuesto logico que el mismo user puede haber realizado mas de una reseña pero nunca exatamente al mismo tiempo. En el caso de la tabla business la condicion para añadir los datos es que el business_id sea diferente y tambien la latitud y longitud, asumiendo que pueden haber varios locales emplazados en lugares diferentes. Finalmente una vez subidos a bigquery estos se conectan directamente con looker para disponibilizar los datos de forma integrada y utilizarlos en la construccion de un dashboard estrategico que luego sera embebido en el el producto final, esto es, la interface de usuario, encontrandose en el mismo punto los dos caminos iniciales que tomaron los datos luego del etl inicial.
+
+![flujo de trabajo](assets/workflow.jpg)
+
+## Diagrama E-R Detallado 
+
+![Diagrama ER detallado](assets/diagrama_e_r.jpg)
+
+>### Tabla "reviews"
+
+>**user_id:** STRING (PK)
+-> identificador unico de usuario
+
+>**business_id:** STRING (FK)
+
+>**rating:** INTEGER
+
+>**timestamp:** TIMESTAMP
+
+>**sentiment_analysis:** INTEGER
+
+### Tabla "business"
+
+**business_id:** STRING (PK)
+
+**name:** STRING
+
+**latitude:** FLOAT
+
+**longitude:** FLOAT
+
+**category:** STRING
+
+**avg_rating:** FLOAT
+
+**num_of_reviews:** INTEGER
+
+
 <!-- metodología section -->
 ## **🔧 Metodología del Trabajo**
 
 La metodología Scrum divide el trabajo en partes pequeñas y manejables llamadas "sprints". Cada sprint dura un período de tiempo corto, en este caso una semana, durante el cual el equipo se enfoca en completar un conjunto específico de tareas. Al final de cada sprint, se realizará una demo (sprint review meeting) en la que se hará una demostración de los entregables desarrollados, esperando una retroalimentación. Se ajusta así la planificación para el siguiente sprint según lo que se haya aprendido. Además, cada día se realizarán reuniones diarias de seguimiento (Daily Standup), para discutir el progreso diario y posibles inconvenientes. Todo esto permite una adaptación continua a medida que el equipo avanza.
 
-![metodología scrum](assets/scrummetodo.png)
+![metodología scrum](assets/scrummetodo.jpg)
 
 **Sprint 1 - Comprensión del Negocio y de los Datos**:
 
@@ -154,8 +198,8 @@ La metodología Scrum divide el trabajo en partes pequeñas y manejables llamada
 
 | Rol            |  Nombre              | LinkedIn | GitHub |
 | -------------- |--------------------- | -------- |-|
-| Data Engineer  | Nazareno Fantin      | [![LinkedIn][linkedin-shield]][linkedin-Naza]  | [![GitHub][github-shield]][github-Naza]  |
-| Data Scientist | Sebastian Rosenblunn | [![LinkedIn][linkedin-shield]][linkedin-Sebas] | [![GitHub][github-shield]][github-Sebas] |
+| Data Engineer  | Sebastian Rosenblunn      | [![LinkedIn][linkedin-shield]][linkedin-Naza]  | [![GitHub][github-shield]][github-Naza]  |
+| Data Scientist | Nazareno Fantin | [![LinkedIn][linkedin-shield]][linkedin-Sebas] | [![GitHub][github-shield]][github-Sebas] |
 | Data Scientist | Alejo Diez Gomez     | [![LinkedIn][linkedin-shield]][linkedin-Alejo]   | [![GitHub][github-shield]][github-Alejo]   |
 | Data Analyst   | Keyla Serna          | [![LinkedIn][linkedin-shield]][linkedin-Keyla] | [![GitHub][github-shield]][github-Keyla] |
 | Data Analyst   | Tomás Basovich       | [![LinkedIn][linkedin-shield]][linkedin-Tom] | [![GitHub][github-shield]][github-Tom] |
