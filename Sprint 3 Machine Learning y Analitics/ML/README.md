@@ -1,14 +1,14 @@
-# Modelo de Machine Learning: 
+# ⚙️​🔧​🤖​ Modelo de Machine Learning: ⚙️​🔧​🤖​
 Creamos las siguientes dos funciones basadas en modelos de Machine Learning 
-### 1. Sistema de recomendación user-item:
+### 1. Sistema de recomendación user-item: 😀​🏠​
 
 - **def recomendacion_restaurante(user_id):**
 
 > Ingresando el id de un usuario, deberíamos recibir una lista con 5 restaurantes recomendados para dicho usuario.
 
-### 2.  Sistema de recomendación item-item:
+### 2.  Sistema de recomendación item-item: ​​🏠​​🏠​​
 
-- **def recomendacion_item_item(busines_id):**
+- **def recomendacion_item_item(busines_id):** 
 
 > Ingresando el id de un negocio, deberíamos recibir una lista con 5 restaurantes recomendados similares a dicho negocio.
 
@@ -18,7 +18,7 @@ Creamos las siguientes dos funciones basadas en modelos de Machine Learning
 - [Funcionamiento de la Funcion 2. Sistema de Recomendacion item-item ](#Funcionamiento-de-la-Funcion-2-Sistema-de-Recomendacion-item-item )
 - [Aplicaciones Comerciales](#Aplicaciones-Comerciales)
 
-# Funcionamiento de la Funcion 1. Sistema de Recomendacion user-item 
+# Funcionamiento de la Funcion 1. Sistema de Recomendacion user-item 😀​🏠​
 ### Modelo de Filtrado Colaborativo 
 #### 1. Importar bibliotecas:
  - Importa las bibliotecas necesarias, como pandas para el manejo de datos y surprise para el filtrado colaborativo.
@@ -56,7 +56,7 @@ Creamos las siguientes dos funciones basadas en modelos de Machine Learning
 #### 13. Función de recomendación de usuario: 
 - Define una función que utiliza el modelo entrenado para hacer recomendaciones de negocios para un usuario específico. Esto podría ser útil para construir sistemas de recomendación personalizados para usuarios basados en sus preferencias históricas de reseñas.
 
-# Aplicaciones Comerciales
+# Aplicaciones Comerciales 😀​​📉​📈​🏙️​
 ### * Sistemas de Recomendación Personalizados: 
 Se puede utilizar para recomendar productos, servicios o contenido personalizado a los usuarios basándose en sus preferencias históricas.
 
@@ -69,7 +69,7 @@ Permite personalizar la experiencia del usuario en aplicaciones y plataformas en
 ### * Optimización de Contenidos:
  Ayuda a las empresas a optimizar la distribución de contenido o productos, mejorando así la relevancia y la satisfacción del usuario.
 
-# Funcionamiento de la Funcion 2. Sistema de Recomendacion item-item 
+# Funcionamiento de la Funcion 2. Sistema de Recomendacion item-item ​​🏠​​🏠​​
 Por supuesto, aquí tienes un desglose más detallado del código y sus posibles aplicaciones comerciales:
 
 #### 1. Importación de bibliotecas:
@@ -92,7 +92,7 @@ Por supuesto, aquí tienes un desglose más detallado del código y sus posibles
 - Utiliza el modelo para encontrar los restaurantes más similares al restaurante de entrada especificado, utilizando la distancia euclidiana en el espacio de características definido por el modelo.
 - Devuelve una lista de nombres de restaurantes similares, lo que permite a los usuarios explorar otras opciones de restaurantes que puedan ser de su interés.
 
-# Aplicaciones comerciales:
+# Aplicaciones comerciales: 😀​​📉​📈​🏙️​
 
 ### Recomendación de restaurantes: 
 El sistema puede ser utilizado por aplicaciones de reservas de restaurantes para recomendar restaurantes similares a los que un usuario ha disfrutado previamente. Esto mejora la experiencia del usuario y aumenta la probabilidad de que los usuarios encuentren restaurantes que se ajusten a sus preferencias.
