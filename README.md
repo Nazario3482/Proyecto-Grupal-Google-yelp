@@ -125,45 +125,21 @@ $$
 ## **🔧 Flujo de Trabajo**
 
 Lo primero que realizamos al recibir los datos en crudo es un trabajo de etl manual y estandarizado a traves de python y las librerias pertinentes. Este etl inicial consta de la eliminacion de las columnas irrelevantes, si es necesario desanidamos columnas, manejamos los valores nulos y duplicados, normalizamos tipos de datos y los nombres de las columnas para estandarizar segun el esquema que se adapta a nuestros objetivos y finalmente se segmentamos las tablas segun corresponda.
+
 ![ETL inicial](assets/etl_inicial.png)
 
 A partir de aca los datos sigues dos caminos diferentes y vuelven a encontrar en el producto final. Por un lado tenemos los datos que seran untilizados para entrenar los sistemas de recomendaciónn por filtrado colaborativo y  filtrado basado en contenido.  Los mismos se implementaran sobre fast api, utilizando streamlit como interface y google app engine para el deploy. Por otro lado, en el segundo camino de los datos, Luego del etl inicial, los datos pasan a un bucket especifico de google cloud storage donde funcionan como trigger para el inicio de las funciones de google cloud functions que ingestara las tablas en big query.
 La funcion verifica si se trata de un archivo csv y de ser asi lo carga de forma temporal y pasa a validar si coincide con el esquema asignado para la tabla de bigquery, de ser asi comienza a subir los datos en otra tabla temporal en big query en donde se realizara un merge con la tabla original si es que se cumplen ciertas condiciones. En ambas tablas solo se cargaran los datos si no estan en tabla original, proceso conocido como carga incremental.pero la tabla reviews y business difieren en las condiciones del merge. El criterio utilizado para la tabla reviews es que que si los datos que se intentan agregar difieren en user_id y timestamp se agregan enfectivamente, asumiendo como supuesto logico que el mismo user puede haber realizado mas de una reseña pero nunca exatamente al mismo tiempo. En el caso de la tabla business la condicion para añadir los datos es que el business_id sea diferente y tambien la latitud y longitud, asumiendo que pueden haber varios locales emplazados en lugares diferentes. Finalmente una vez subidos a bigquery estos se conectan directamente con looker para disponibilizar los datos de forma integrada y utilizarlos en la construccion de un dashboard estrategico que luego sera embebido en el el producto final, esto es, la interface de usuario, encontrandose en el mismo punto los dos caminos iniciales que tomaron los datos luego del etl inicial.
 
+Junto al codigo de las funciones en el repositorio se puede encontrar un README.md en la sub-carpeta ML de la carpeta "Sprint 3 Machine Learning y Analitics" donde se explica con precision el desarrollo y funcionamiento del modelo de Machine Learning.
+
 ![flujo de trabajo](assets/workflow.jpg)
 
-## Diagrama E-R Detallado 
+## Diagrama E-R
 
 ![Diagrama ER detallado](assets/diagrama_e_r.jpg)
 
->### Tabla "reviews"
-
->**user_id:** STRING (PK)
--> identificador unico de usuario
-
->**business_id:** STRING (FK)
-
->**rating:** INTEGER
-
->**timestamp:** TIMESTAMP
-
->**sentiment_analysis:** INTEGER
-
-### Tabla "business"
-
-**business_id:** STRING (PK)
-
-**name:** STRING
-
-**latitude:** FLOAT
-
-**longitude:** FLOAT
-
-**category:** STRING
-
-**avg_rating:** FLOAT
-
-**num_of_reviews:** INTEGER
+Por lo que respecta al diccionario de datos este se encuentra en el readme.md de la carpeta "Sprint 2 Ingenieria de Datos"
 
 
 <!-- metodología section -->
