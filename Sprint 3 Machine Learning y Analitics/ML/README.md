@@ -33,13 +33,13 @@ Creamos las siguientes dos funciones basadas en modelos de Machine Learning
 - Convierte las categorías de negocios en cadenas de texto y las guarda en una lista. Este preprocesamiento puede ser útil para análisis posteriores que requieran el manejo de categorías de negocios.
 
 #### 5. Cálculo de similitud: 
-- Utiliza el modelo de spaCy para calcular la similitud entre las palabras clave ('restaurant', 'food', 'cuisine') y las categorías de negocios. Esto podría ser útil para agrupar categorías de negocios similares o para recomendar negocios basados en las preferencias de los usuarios.
+- Utiliza el modelo de spaCy para calcular la similitud entre las palabras clave ('restaurant', 'food', 'cuisine') y las categorías de negocios. Esto es útil para agrupar categorías de negocios similares o para recomendar negocios basados en las preferencias de los usuarios.
 
 #### 6. Filtrado de categorías relacionadas:
-- Filtra las categorías de negocios que tienen una similitud superior a un umbral especificado con las palabras clave dadas. Esto podría utilizarse para agrupar o categorizar negocios en función de sus tipos o características.
+- Filtra las categorías de negocios que tienen una similitud superior a un umbral especificado con las palabras clave dadas. 
 
 #### 7. Eliminación de columnas y renombrado:
-- Elimina la columna 'category' del DataFrame y renombra la columna 'name' como 'business_id'. Esto podría ser útil para simplificar el DataFrame o para prepararlo para análisis adicionales.
+- Elimina la columna 'category' del DataFrame y renombra la columna 'name' como 'business_id'. Esto sirve para simplificar el DataFrame o para prepararlo para análisis adicionales.
 
 #### 8. Exportación de datos:
 - Exporta el DataFrame procesado a un nuevo archivo CSV llamado 'data_user_item.csv'. Esto podría ser útil para compartir o para utilizar los datos procesados en otros análisis o aplicaciones.
