@@ -144,20 +144,20 @@ $$
 Al recibir los datos en bruto, se lleva a cabo un trabajo manual y estandarizado de ETL utilizando Python y las librerías pertinentes.
 Este proceso incluye la eliminación de columnas irrelevantes, desanidamiento de columnas si es necesario, manejo de valores nulos y duplicados, normalización de tipos de datos y nombres de columnas según un esquema estandarizado.
 Posteriormente, se segmentan las tablas según corresponda para su posterior procesamiento.
-**Caminos de Datos:**
-**Camino 1:** Los datos destinados al entrenamiento de los sistemas de recomendación por filtrado colaborativo y basado en contenido se implementan sobre FastAPI, utilizando Streamlit como interfaz y Google App Engine para el despliegue.
-**Camino 2:** Después del proceso inicial de ETL, los datos pasan a un bucket específico en Google Cloud Storage, donde actúan como desencadenante para iniciar las funciones de Google Cloud Functions que ingestarán las tablas en BigQuery.
-**Proceso de Ingesta de Datos en BigQuery:**
+- **Caminos de Datos:**
+- **Camino 1:** Los datos destinados al entrenamiento de los sistemas de recomendación por filtrado colaborativo y basado en contenido se implementan sobre FastAPI, utilizando Streamlit como interfaz y Google App Engine para el despliegue.
+- **Camino 2:** Después del proceso inicial de ETL, los datos pasan a un bucket específico en Google Cloud Storage, donde actúan como desencadenante para iniciar las funciones de Google Cloud Functions que ingestarán las tablas en BigQuery.
+- **Proceso de Ingesta de Datos en BigQuery:**
 Las funciones verifican si los archivos son archivos CSV y, de ser así, los cargan temporalmente.
 Luego, se validan si los datos coinciden con el esquema asignado para la tabla de BigQuery y se cargan en una tabla temporal en BigQuery.
 Se lleva a cabo un proceso de carga incremental, donde los datos se cargarán en las tablas solo si no están en la tabla original.
-**Condiciones de Merge en BigQuery:**
+- **Condiciones de Merge en BigQuery:**
 Para la tabla de reseñas (reviews), se agrega los datos si difieren en user_id y timestamp, asumiendo que el mismo usuario puede haber realizado más de una reseña pero nunca exactamente al mismo tiempo.
 Para la tabla de negocios (business), se añaden los datos si business_id es diferente y también si la latitud y longitud son diferentes, asumiendo que puede haber varios locales emplazados en lugares diferentes.
-**Conexión con Looker y Creación de Dashboard Estratégico:**
+- **Conexión con Looker y Creación de Dashboard Estratégico:**
 Una vez cargados en BigQuery, los datos se conectan directamente con Looker para disponibilizarlos de forma integrada.
 Se utilizan en la construcción de un dashboard estratégico que luego se embebe en la interfaz de usuario final.
-**Documentación Adicional:**
+- **Documentación Adicional:**
 Junto al código de las funciones en el repositorio, se encuentra un README.md en la subcarpeta ML de la carpeta "Sprint 3 Machine Learning y Analytics", donde se explica con precisión el desarrollo y funcionamiento del modelo de Machine Learning.
 
 ![flujo de trabajo](assets/workflow.jpg)
