@@ -45,7 +45,7 @@ Creamos las siguientes dos funciones basadas en modelos de Machine Learning
 - Exporta el DataFrame procesado a un nuevo archivo CSV llamado 'data_user_item.csv'. Esto podría ser útil para compartir o para utilizar los datos procesados en otros análisis o aplicaciones.
 
 #### 9. Entrenamiento de modelo de filtrado colaborativo: 
-- Utiliza la biblioteca Surprise para entrenar un modelo de filtrado colaborativo basado en el algoritmo SVD (Descomposición en Valores Singulares). Este modelo podría utilizarse para hacer recomendaciones de negocios a usuarios en función de sus historiales de reseñas anteriores.
+- Utiliza la biblioteca Surprise para entrenar un modelo de filtrado colaborativo basado en el algoritmo SVD (Descomposición en Valores Singulares). 
 
 #### 10. Optimización de parámetros del modelo: 
 - Utiliza GridSearchCV para encontrar los mejores parámetros del modelo SVD utilizando validación cruzada. Esto ayuda a mejorar el rendimiento del modelo de filtrado colaborativo.
@@ -54,7 +54,7 @@ Creamos las siguientes dos funciones basadas en modelos de Machine Learning
 - Guarda el mejor modelo entrenado en un archivo llamado 'modelo_user_item.pkl'. Esto permite reutilizar el modelo entrenado sin tener que entrenarlo nuevamente cada vez que se necesite hacer una recomendación.
 
 #### 13. Función de recomendación de usuario: 
-- Define una función que utiliza el modelo entrenado para hacer recomendaciones de negocios para un usuario específico. Esto podría ser útil para construir sistemas de recomendación personalizados para usuarios basados en sus preferencias históricas de reseñas.
+- Define una función que utiliza el modelo entrenado para hacer recomendaciones de negocios para un usuario específico. 
 
 # Aplicaciones Comerciales 😀​​📉​📈​🏙️​
 ### * Sistemas de Recomendación Personalizados: 
