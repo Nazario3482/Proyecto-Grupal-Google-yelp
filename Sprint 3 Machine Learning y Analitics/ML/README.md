@@ -70,7 +70,7 @@ Permite personalizar la experiencia del usuario en aplicaciones y plataformas en
  Ayuda a las empresas a optimizar la distribución de contenido o productos, mejorando así la relevancia y la satisfacción del usuario.
 
 # Funcionamiento de la Funcion 2. Sistema de Recomendacion item-item ​​🏠​​🏠​​
-Por supuesto, aquí tienes un desglose más detallado del código y sus posibles aplicaciones comerciales:
+
 
 #### 1. Importación de bibliotecas:
 - Se importan varias bibliotecas populares para el análisis de datos y el aprendizaje automático, como pandas para la manipulación de datos, scikit-learn para el modelado de aprendizaje automático, y spaCy para procesamiento de lenguaje natural (NLP). Además, se importan módulos específicos como `KNeighborsTransformer` de scikit-learn y `SVD` de Surprise para recomendaciones.
