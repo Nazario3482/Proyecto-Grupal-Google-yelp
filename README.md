@@ -19,6 +19,9 @@ Nuestro enfoque incluirá la aplicación de técnicas avanzadas de análisis de 
 
 Como parte de nuestra solución, desarrollaremos un sistema de recomendación de restaurantes que integrará las preferencias y experiencias previas de los usuarios en ambas plataformas. Este sistema permitirá a los usuarios descubrir nuevos sabores y experiencias gastronómicas basadas en sus preferencias individuales y experiencias anteriores.
 
+<!-- Contexto section -->
+##  **Deploy**
+[App Data Travel](https://data0science0porject.streamlit.app/)
 
 <!-- objetivos section -->
 ## **🎯 Objetivos**
